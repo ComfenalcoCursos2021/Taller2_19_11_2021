@@ -6,7 +6,7 @@ addEventListener("DOMContentLoaded", async()=>{
             numero: 50
         })
     };
-    let peticion = await fetch("https://pruebacofenalco.000webhostapp.com/Taller2_19_11_2021/Ejercicio6/api.php", config);
+    let peticion = await fetch("https://pruebacofenalco.000webhostapp.com/Taller2_19_11_2021/Ejercicio1/api.php", config);
     let datos = await peticion.text();
     console.log(datos);
 })
