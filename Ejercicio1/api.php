@@ -10,8 +10,9 @@
     if($_DATA){
         $_DATA = json_decode($_DATA, true);
         extract($_DATA);
-    }else{
+    }else{ 
         $numero = (integer) 1;
     }
-    print_r($numero);
+    print_r($numero_1);
+    print_r($numero_2);
 ?>
