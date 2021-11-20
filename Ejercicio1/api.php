@@ -6,13 +6,17 @@
     header('Access-Control-Allow-Origin: *');
     header("Content-Type: application/json");
     $_DATA = file_get_contents("php://input");
-    print_r(json_encode($Ejercicio,JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+    // print_r(json_encode($Ejercicio,JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
     if($_DATA){
         $_DATA = json_decode($_DATA, true);
         extract($_DATA);
     }else{ 
-        $numero = (integer) 1;
+        $numero_1 = (integer) 1;
+        $numero_2 = (integer) 1;
     }
-    print_r($numero_1);
-    print_r($numero_2);
+    $plantilla = <<<HTML
+        <h1>Respuesta : $numero_1 </h1>
+        <h1>Respuesta2 : $numero_2 </h1>
+    HTML;
+    print_r($plantilla);
 ?>

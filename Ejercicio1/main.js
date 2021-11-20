@@ -15,6 +15,7 @@ addEventListener("DOMContentLoaded", ()=>{
         let enviar = async()=>{
             let peticion = await fetch("api.php", config);
             let datos = await peticion.text();
+            document.querySelector("#myRes").innerHTML = datos;
             console.log(datos);
         }
         enviar();
